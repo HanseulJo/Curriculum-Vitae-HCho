@@ -1,0 +1,70 @@
+% Set document class and font size
+\documentclass[letterpaper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+
+% Package imports
+\usepackage{setspace, longtable, graphicx, hyphenat, fancyhdr, ifthen, everypage, enumitem, amsmath, setspace}
+\usepackage[hidelinks]{hyperref}
+
+% --- Page layout settings ---
+
+% Set page margins
+\usepackage[left=1in, right=1in, bottom=0.7in, top=0.7in]{geometry}
+
+% Set line spacing
+\renewcommand{\baselinestretch}{1.15}
+
+% --- Page formatting ---
+
+% Set link colors
+\usepackage[dvipsnames]{xcolor}
+\hypersetup{colorlinks=false}
+
+% Set font to Libertine, including math support
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+% Remove page numbering
+\pagenumbering{gobble}
+
+% Tab
+\newcommand{\tab}{\setlength{\leftskip}{10pt}}
+
+% --- Document starts here ---
+
+\begin{document}
+
+% Name and date of last update to this document
+\noindent{\Huge{Hanseul Cho}
+\hfill{\it\footnotesize Updated \today}}
+
+% --- Contact information and other items ---
+\vspace{0.5cm} 
+\noindent{
+    \textbf{Email}: \href{mailto:jhs4015@kaist.ac.kr}{jhs4015@kaist.ac.kr} \hspace{0.1in} \textbf{GitHub}: \href{https://github.com/HanseulJo}{HanseulJo}
+    \hspace{0.1in} \textbf{Blog}: \href{https://hasneuljo.github.io}{Link}
+}
+
+% --- Start the two-column table storing the main content ---
+
+% Set spacing between columns
+\setlength{\tabcolsep}{8pt}
+
+% Set the width of each column
+\begin{longtable}{p{0.8in}p{5.3 in}}
+
+% --- Section: Research interests ---
+
+\nohyphens{\color{OliveGreen}{Research interests}}
+& Deep Learning Theory, Optimization/Generalization in Deep Learning \\
+&\\
+\input{cv/education.tex}
+%\input{cv/publications.tex}
+\input{cv/experiences.tex}
+\input{cv/awards.tex}
+\input{cv/skills.tex}
+
+% --- End of CV! ---
+
+\end{longtable}
+\end{document}
