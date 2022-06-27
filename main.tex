@@ -1,31 +1,25 @@
-% Set document class and font size
 \documentclass[letterpaper, 11pt]{article}
 \usepackage[utf8]{inputenc}
 
-% Package imports
 \usepackage{setspace, longtable, graphicx, hyphenat, fancyhdr, ifthen, everypage, enumitem, amsmath, setspace}
 \usepackage[hidelinks]{hyperref}
-
-% --- Page layout settings ---
-
-% Set page margins
 \usepackage[left=1in, right=1in, bottom=0.7in, top=0.7in]{geometry}
-
-% Set line spacing
 \renewcommand{\baselinestretch}{1.15}
-
-% --- Page formatting ---
-
-% Set link colors
 \usepackage[dvipsnames]{xcolor}
-\hypersetup{colorlinks=false}
-
-% Set font to Libertine, including math support
+\definecolor{darkblue}{rgb}{0.0,0.0,0.65}
+\definecolor{darkred}{rgb}{0.65,0.0,0.0}
+\definecolor{darkgreen}{rgb}{0.15,0.35,0.05}
+\hypersetup{
+	colorlinks = true,
+	citecolor  = darkgreen,
+	linkcolor  = darkred,
+	filecolor  = darkblue,
+	urlcolor   = darkgreen,
+}
 \usepackage{libertine}
 \usepackage[libertine]{newtxmath}
-
-% Remove page numbering
 \pagenumbering{gobble}
+\usepackage{kotex}
 
 % Tab
 \newcommand{\tab}{\setlength{\leftskip}{10pt}}
@@ -34,15 +28,14 @@
 
 \begin{document}
 
-% Name and date of last update to this document
-\noindent{\Huge{Hanseul Cho}
-\hfill{\it\footnotesize Updated \today}}
+\noindent{\huge{Hanseul Cho (조한슬)}
+\hfill{\it\footnotesize Last Update: \today}}
 
 % --- Contact information and other items ---
 \vspace{0.5cm} 
 \noindent{
     \textbf{Email}: \href{mailto:jhs4015@kaist.ac.kr}{jhs4015@kaist.ac.kr} \hspace{0.1in} \textbf{GitHub}: \href{https://github.com/HanseulJo}{HanseulJo}
-    \hspace{0.1in} \textbf{Blog}: \href{https://hasneuljo.github.io}{Link}
+    \hspace{0.1in} \textbf{Blog}: \href{https://hanseuljo.github.io}{hanseuljo.github.io}
 }
 
 % --- Start the two-column table storing the main content ---
@@ -55,8 +48,8 @@
 
 % --- Section: Research interests ---
 
-\nohyphens{\color{OliveGreen}{Research interests}}
-& Deep Learning Theory, Optimization/Generalization in Deep Learning \\
+\nohyphens{\textbf{\color{OliveGreen}{Research interests}}}
+& I am studying various topics of \underline{\smash{machine/deep learning theory}} with interest. Recently, I focus on convergence analysis of optimization algorithms for machine learning. \\
 &\\
 \input{cv/education.tex}
 %\input{cv/publications.tex}
